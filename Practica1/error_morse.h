@@ -5,13 +5,16 @@
 #include <stdbool.h>
 
 typedef struct{
-  uint8_t a,b
+  uint8_t high,low
 } num
 
-num add_check(char c);
+num add_check(uint8_t c);
 
-char get_redun(char c);
+bool check_is_ok(uint8_t mensaje[]);
 
-bool check_is_ok(char c);
+num add_crc(uint8_t mensaje[]);
+
+bool crc_is_ok(uint8_t mensaje[]);
+
 
 #endif
